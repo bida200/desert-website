@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>  
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>Order here</h2>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="https://formspree.io/f/meevekvq" method="POST">
+
+<h2>Place Your Order</h2>
+<label>Customer Name:</label><br>
+<input type="text" name="customer_name" required><br><br>
+
+<label>Contact Number:</label><br>
+<input type="tel" name="contact_number" required><br><br>
+
+ <h3>Choose Desserts</h3>
+
+<p>Select ALL desserts you want:</p>
+
+<label><input type="checkbox" name="desserts" value="Brownie - Chocolate"> Brownie - Chocolate</label><br>
+<label><input type="checkbox" name="desserts" value="Brownie - Caramel"> Brownie - Caramel</label><br>
+<label><input type="checkbox" name="desserts" value="Cookie - Chocolate Chip"> Cookie - Chocolate Chip</label><br>
+<label><input type="checkbox" name="desserts" value="Cookie - Oatmeal Raisin"> Cookie - Oatmeal Raisin</label><br>
+<label><input type="checkbox" name="desserts" value="Cake - Red Velvet"> Cake - Red Velvet</label><br>
+<label><input type="checkbox" name="desserts" value="Cake - Carrot"> Cake - Carrot</label><br>
+<label><input type="checkbox" name="desserts" value="Cupcake - Lemon"> Cupcake - Lemon</label><br>
+<label><input type="checkbox" name="desserts" value="Cupcake - Oreo"> Cupcake - Oreo</label><br><br>
+
+<label>Total Quantity (all items):</label><br>
+<input type="number" name="total_quantity" min="1" value="1"><br><br>
+
+<h3>Extras (choose any)</h3>
+
+<p>Coffee:</p>
+<label><input type="checkbox" name="extras" value="Black Coffee"> Black Coffee</label>
+<label><input type="checkbox" name="extras" value="Cappuccino"> Cappuccino</label><br><br>
+
+<p>Milk:</p>
+<label><input type="checkbox" name="extras" value="Chocolate Milk"> Chocolate</label>
+<label><input type="checkbox" name="extras" value="Plain Milk"> Plain</label><br><br>
+
+<p>Berries:</p>
+<label><input type="checkbox" name="extras" value="Strawberry"> Strawberry</label>
+<label><input type="checkbox" name="extras" value="Blueberry"> Blueberry</label><br><br>
+
+<p>Nuts:</p>
+<label><input type="checkbox" name="extras" value="Almond"> Almond</label>
+<label><input type="checkbox" name="extras" value="Peanut"> Peanut</label><br><br>
+
+<p>Ice Cream:</p>
+<label><input type="checkbox" name="extras" value="Vanilla Ice Cream"> Vanilla</label>
+<label><input type="checkbox" name="extras" value="Mint Ice Cream"> Mint</label><br><br>
+
+<label>Pickup or Delivery:</label><br>
+<select name="delivery_option">
+    <option>Pickup</option>
+    <option>Delivery</option>
+</select><br><br>
+
+<label>Address (if delivery):</label><br>
+<textarea name="address"></textarea><br><br>
+
+<label>Pickup Time:</label><br>
+<input type="time" name="pickup_time"><br><br>
+
+<button type="submit">Submit Order</button>
+
+</form>
+
+<footer>
+ <h3>Contact</h3>
+  <p>+267 76029948</p>
+  <p>delightfultreats@gmail.com</p>
+
+  <h3>Social Media</h3>
+  <p>TikTok</p>
+</footer>
+
+</body>
+</html>
