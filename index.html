@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>DELIGHTFUL TREATS</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
 </head>
 
 <body> 
-   <h1>DELIGHTFUL TREATS</h1> 
+    <body style="background-color:#ffc0cb;"></body> 
   <header>
+    <h1>DELIGHTFUL TREATS</h1> 
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,6 +24,7 @@
             </ul>
         </nav>
     </header>
+
     <p>Welcome to Delightful treats, freshly baked mouthwatering desserts that are made with love.</p>
  <h2>Available Treats</h2>
     <ul class="dessert-list">
@@ -33,6 +36,9 @@
            height: auto; 
            display: block; 
            margin: 30px auto;">
+           <button class="btn btn-primary mt-2" onclick="goToOrder('Brownies')">
+    Order
+</button>
     <h3>Brownies</h3>
     <p>Moist and fudgy brownies with flavor variations</p>
   </li>
@@ -43,6 +49,9 @@
            height: auto; 
            display: block; 
            margin: 30px auto;"/>
+            <button class="btn btn-primary mt-2" onclick="goToOrder('Cookies')">
+    Order
+</button>
     <h3>Cookies</h3>
     <p>freshly baked cookies with a crispy edge and soft center</p>
   </li>
@@ -53,6 +62,9 @@
            height: auto; 
            display: block; 
            margin: 30px auto;" />
+        <button class="btn btn-primary mt-2" onclick="goToOrder('Cupcakes')">
+    Order
+        </button>
         <h3>Cupcakes</h3>
         <p>Delicious cupcakes with a variety of flavors and toppings</p>
         </li>
@@ -63,7 +75,9 @@
            height: auto; 
            display: block; 
            margin: 30px auto;"/>
-        <h3>Cakes</h3>
+        <button class="btn btn-primary mt-2" onclick="goToOrder('Cakes')">
+    Order
+        </button> 
         <p>Delicious cakes with a variety of flavors and decorations</p>
         </li>
         </ul>
@@ -85,6 +99,9 @@
   <h3>Social Media</h3>
   <p>TikTok</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> 
+<script src="script.js"></script> 
 </body>
 </html>
