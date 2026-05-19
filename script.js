@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+document.addEventListener("DOMContentLoaded", function () {
 const deliveryOption = document.querySelector("select[name='delivery_option']");
 const addressBox = document.getElementById("address-box");
 
@@ -108,35 +109,47 @@ if (deliveryOption && addressBox) {
         }
     });
 }
-const prices = {
-    "Brownie - Chocolate": 15,
-    "Brownie - Caramel": 15,
-    "Cookie - Chocolate Chip": 5,
-    "Cookie - Oatmeal Raisin": 5,
-    "Cake - Red Velvet": 100,
-    "Cake - Carrot": 100,
-    "Cupcake - Lemon": 7,
-    "Cupcake - Oreo": 7
-};
-
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
-const totalDisplay = document.getElementById("total-price");
-
-checkboxes.forEach(box => {
-    box.addEventListener("change", calculateTotal);
 });
+document.addEventListener("DOMContentLoaded", function () {
 
-function calculateTotal() {
-    let total = 0;
+    const prices = {
+        "Brownie - Chocolate": 15,
+        "Brownie - Caramel": 15,
+        "Cookie - Chocolate Chip": 5,
+        "Cookie - Oatmeal Raisin": 5,
+        "Cake - Red Velvet": 100,
+        "Cake - Carrot": 100,
+        "Cupcake - Lemon": 7,
+        "Cupcake - Oreo": 7
+    };
 
-    checkboxes.forEach(box => {
-        if (box.checked && prices[box.value]) {
-            total += prices[box.value];
-        }
+    const dessertBoxes = document.querySelectorAll(".dessert-item");
+    const quantityInput = document.querySelector("input[name='total_quantity']");
+    const totalDisplay = document.getElementById("total-price");
+
+    if (!dessertBoxes.length || !quantityInput || !totalDisplay) return;
+
+    function calculateTotal() {
+        let total = 0;
+        let quantity = parseInt(quantityInput.value) || 1;
+
+        dessertBoxes.forEach(box => {
+            if (box.checked && prices[box.value]) {
+                total += prices[box.value];
+            }
+        });
+
+        total = total * quantity;
+        totalDisplay.textContent = total;
+    }
+
+    dessertBoxes.forEach(box => {
+        box.addEventListener("change", calculateTotal);
     });
 
-    totalDisplay.textContent = total;
-}
+    quantityInput.addEventListener("input", calculateTotal);
+
+});
 document.querySelector("form").addEventListener("submit", function () {
     alert("Your order has been submitted successfully!");
 });

@@ -247,3 +247,189 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+.active {
+    background: none;
+    color: inherit;
+}
+.dessert-item {
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.dessert-item img {
+    animation: float 3s ease-in-out infinite;
+}
+nav ul li a {
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+.btn-primary {
+    background-color: #7a3b2e !important;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.08);
+}
+body {
+    background-color: #ffc0cb;
+    background-image: radial-gradient(rgba(255,255,255,0.2) 2px, transparent 2px);
+    background-size: 40px 40px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+.card, button, img {
+    border-radius: 15px;
+}
+.card {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+section {
+    padding: 40px 20px;
+}
+table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #f8c8dc;
+    color: #5a3e36;
+}
+
+td {
+    vertical-align: middle;
+}
+.table {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff5f7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background-color: #ff69b4;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+}
+
+.table td {
+    vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table img {
+    transition: 0.3s;
+}
+
+.table img:hover {
+    transform: scale(1.1);
+}
+/* 🍓 PAGE FADE-IN */
+body {
+    opacity: 0;
+    animation: pageFade 0.8s ease-in forwards;
+}
+
+@keyframes pageFade {
+    to {
+        opacity: 1;
+    }
+}
+
+/* 🍰 TABLE ROW ANIMATION */
+.table tbody tr {
+    animation: slideUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* delay each row for smooth entrance */
+.table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 🍓 HOVER POP EFFECT */
+.table tbody tr:hover {
+    transform: scale(1.01);
+    transition: 0.25s ease;
+    background-color: #ffe0ec !important;
+}
+
+/* 🍰 IMAGE FLOAT ANIMATION ON HOVER */
+.table img {
+    transition: 0.3s ease;
+}
+
+.table img:hover {
+    transform: scale(1.1) rotate(1deg);
+}
+
+/* 🍓 HEADER GLOW PULSE */
+h1 {
+    animation: glow 2.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff69b4;
+    }
+    50% {
+        text-shadow: 0 0 15px #ff1493;
+    }
+}

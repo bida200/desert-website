@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Order</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-<div class="container-fluid px-3">
-    <p id="selected-item" style="font-weight:bold; color:#663939;"></p>
+<div class="container-fluid px-0">
     <header>
-        <h2>Order here</h2>
+        <h1>Order here</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -41,14 +41,14 @@
 
 <p>Select ALL desserts you want:</p>
 
-<label><input type="checkbox" name="desserts" value="Brownie - Chocolate"> Brownie - Chocolate</label><br>
-<label><input type="checkbox" name="desserts" value="Brownie - Caramel"> Brownie - Caramel</label><br>
-<label><input type="checkbox" name="desserts" value="Cookie - Chocolate Chip"> Cookie - Chocolate Chip</label><br>
-<label><input type="checkbox" name="desserts" value="Cookie - Oatmeal Raisin"> Cookie - Oatmeal Raisin</label><br>
-<label><input type="checkbox" name="desserts" value="Cake - Red Velvet"> Cake - Red Velvet</label><br>
-<label><input type="checkbox" name="desserts" value="Cake - Carrot"> Cake - Carrot</label><br>
-<label><input type="checkbox" name="desserts" value="Cupcake - Lemon"> Cupcake - Lemon</label><br>
-<label><input type="checkbox" name="desserts" value="Cupcake - Oreo"> Cupcake - Oreo</label><br><br>
+<label><input type="checkbox" class="dessert-item" value="Brownie - Chocolate"> Brownie - Chocolate</label><br>
+<label><input type="checkbox" class="dessert-item" value="Brownie - Caramel"> Brownie - Caramel</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cookie - Chocolate Chip"> Cookie - Chocolate Chip</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cookie - Oatmeal Raisin"> Cookie - Oatmeal Raisin</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cake - Red Velvet"> Cake - Red Velvet</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cake - Carrot"> Cake - Carrot</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cupcake - Lemon"> Cupcake - Lemon</label><br>
+<label><input type="checkbox" class="dessert-item" value="Cupcake - Oreo"> Cupcake - Oreo</label><br><br>
 
 <label>Total Quantity (all items):</label><br>
 <input type="number" name="total_quantity" min="1" value="1"><br><br>
