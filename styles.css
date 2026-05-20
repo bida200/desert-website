@@ -433,3 +433,28 @@ h1 {
         text-shadow: 0 0 15px #ff1493;
     }
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* fix layout overflow */
+.container, .container-fluid {
+    overflow-x: hidden;
+}
+
+/* if you have image rows/grids */
+.image-grid, .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* mobile-friendly scaling */
+@media (max-width: 768px) {
+    img:hover {
+        transform: none; /* disables hover weirdness on phones */
+    }
+}
